@@ -4,10 +4,10 @@
   "description": "1st hexlet project",
   "main": "index.js",
   "scripts": {
-	"babel-node": "babel-node",
-	"build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-	"prepublishOnly": "npm run build",
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
