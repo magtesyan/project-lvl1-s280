@@ -1,4 +1,4 @@
-import readlineSync from 'https://rawgit.com/anseki/readline-sync/master/lib/readline-sync.js';
+import readlineSync from 'readline-sync';
 
 const name = () => {
 	const imya = readlineSync.question('Welcome to the Brain Games!\n\nMay I have your name? ');
