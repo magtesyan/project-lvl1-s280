@@ -21,7 +21,7 @@ const braineven = (counter, name2) => {
     }
     console.log('Correct!');
     counter1 += 1;
-    braineven(counter1);
+    braineven(counter1, name2);
   } else {
     console.log(`${answer} is wrong answer ;(. Correct answer was ${correctanswer}\nLet's try again, ${name2}`);
     return false;
