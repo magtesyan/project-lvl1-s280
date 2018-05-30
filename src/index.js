@@ -6,10 +6,9 @@ const name = () => {
 };
 
 
-const braineven = (counter) => {
-  let counter1 = 0;
-  const name1 = readlineSync.question('Welcome to the Brain Games!\n\nMay I have your name? ');
-  const rnd = Math.random();
+const braineven = (counter, name2) => {
+  let counter1 = counter;
+  const rnd = Math.round(Math.random() * 100);
   let correctanswer = '';
   console.log(`Question: ${rnd}`);
   const answer = readlineSync.question('\nYour answer: ');
@@ -17,14 +16,14 @@ const braineven = (counter) => {
   else correctanswer += 'no';
   if (correctanswer === answer) {
     if (counter === 2) {
-      console.log(`Congratulations, ${name1}`);
+      console.log(`Congratulations, ${name2}`);
       return true;
     }
     console.log('Correct!');
     counter1 += 1;
     braineven(counter1);
   } else {
-    console.log(`${answer} is wrong answer ;(. Correct answer was ${correctanswer}\nLet's try again, ${name1}`);
+    console.log(`${answer} is wrong answer ;(. Correct answer was ${correctanswer}\nLet's try again, ${name2}`);
     return false;
   }
   return true;
