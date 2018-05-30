@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import braineven from '../index';
+import braineven from '..';
 
 braineven(0);
