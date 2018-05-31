@@ -37,14 +37,14 @@ const getQuestion = (game, digit1) => {
 
 // GetAnswer
 const getAnswer = (game, playerName) => {
-  let correctAnswer = '';
   for (let counter = 0; counter < 3; counter += 1) {
+    let correctAnswer = '';
     const digit1 = randomDigit();
     if (game === 'braineven') correctAnswer += isEven(digit1);
     getQuestion(game, digit1);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
-    console.log('Correct!');
+    console.log('Correct!\n');
   }
   return console.log(`Congratulations,${playerName}!`);
 };
