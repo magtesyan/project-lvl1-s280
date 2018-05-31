@@ -48,13 +48,13 @@ const getAnswer = (game, playerName) => {
     if (game === 'braineven') correctAnswer += isEven(digit1);
     if (game === 'calculator') {
       if (digit3 < 33) {
-        correctAnswer = digit1 + digit2;
+        correctAnswer += digit1 + digit2;
         operator += '+';
       } else if (digit3 < 66) {
-        correctAnswer = digit1 - digit2;
+        correctAnswer += digit1 - digit2;
         operator += '-';
       } else {
-        correctAnswer = digit1 * digit2;
+        correctAnswer += digit1 * digit2;
         operator += '*';
       }
     }
