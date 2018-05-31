@@ -46,7 +46,7 @@ const getAnswer = (game, playerName) => {
     if (answer !== correctAnswer) return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
     console.log('Correct!\n');
   }
-  return console.log(`Congratulations,${playerName}!`);
+  return console.log(`Congratulations, ${playerName}!`);
 };
 
 // 4 point
