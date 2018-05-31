@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { braineven } from '..';
+import { calculator } from '..';
 
-braineven();
+calculator();
