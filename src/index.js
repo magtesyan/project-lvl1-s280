@@ -7,17 +7,17 @@ const name = () => {
 };
 
 // WelcomeMessage - Welcome to the Brain Games!
-const welcomeMessage = () => console.log('Welcome to the Brain Games!\n');
+const welcomeMessage = () => console.log('Welcome to the Brain Games!');
 
 // TaskMessage
 const taskMessage = (game) => {
-  if (game === 'braineven') console.log('Answer "yes" if number even otherwise answer "no".\n\n');
+  if (game === 'braineven') console.log('Answer "yes" if number even otherwise answer "no".\n');
 };
 
 // AskingName
 const getName = () => {
   const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${playerName}!`);
+  console.log(`Hello ${playerName}!\n`);
   return playerName;
 };
 
@@ -32,16 +32,15 @@ const isEven = (digit) => {
 
 // GetQuestion
 const getQuestion = (game, digit1) => {
-  console.log('Question: ');
-  if (game === 'braineven') console.log(`${digit1}\n`);
+  if (game === 'braineven') console.log(`Question: ${digit1}`);
 };
 
 // GetAnswer
 const getAnswer = (game, playerName) => {
   let correctAnswer = '';
-  const digit1 = randomDigit();
-  if (game === 'braineven') correctAnswer += isEven(digit1);
   for (let counter = 0; counter < 3; counter += 1) {
+    const digit1 = randomDigit();
+    if (game === 'braineven') correctAnswer += isEven(digit1);
     getQuestion(game, digit1);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
