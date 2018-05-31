@@ -81,7 +81,7 @@ const calculator = () => {
   welcomeMessage();
   taskMessage('calculator');
   const playerName = getName();
-  getAnswer('braineven', playerName);
+  getAnswer('calculator', playerName);
 };
 
 export { braineven, name, calculator };
