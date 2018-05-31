@@ -50,12 +50,10 @@ const getAnswer = (game, playerName) => {
       if (digit3 < 33) {
         correctAnswer = digit1 + digit2;
         operator += '+';
-      }
-      if (digit3 < 66) {
+      } else if (digit3 < 66) {
         correctAnswer = digit1 - digit2;
         operator += '-';
-      }
-      if (digit3 < 101) {
+      } else {
         correctAnswer = digit1 * digit2;
         operator += '*';
       }
