@@ -1,10 +1,5 @@
 import readlineSync from 'readline-sync';
-
-// 2 point
-const name = () => {
-  const name0 = readlineSync.question('Welcome to the Brain Games!\n\nMay I have your name? ');
-  console.log(`Hello, ${name0}`);
-};
+import getRandomDigit from './utils';
 
 // WelcomeMessage - Welcome to the Brain Games!
 const welcomeMessage = () => console.log('Welcome to the Brain Games!');
@@ -21,9 +16,6 @@ const getName = () => {
   console.log(`Hello ${playerName}!\n`);
   return playerName;
 };
-
-// RandomDigit
-const randomDigit = () => Math.round(Math.random() * 100);
 
 // IsEven
 const isEven = (digit) => {
@@ -42,9 +34,9 @@ const getAnswer = (game, playerName) => {
   for (let counter = 0; counter < 3; counter += 1) {
     let correctAnswer = '';
     let operator = '';
-    const digit1 = randomDigit();
-    const digit2 = randomDigit();
-    const digit3 = randomDigit();
+    const digit1 = getRandomDigit();
+    const digit2 = getRandomDigit();
+    const digit3 = getRandomDigit();
     if (game === 'braineven') correctAnswer += isEven(digit1);
     if (game === 'calculator') {
       if (digit3 < 33) {
@@ -66,20 +58,4 @@ const getAnswer = (game, playerName) => {
   return console.log(`Congratulations, ${playerName}!`);
 };
 
-// 4 point
-const braineven = () => {
-  welcomeMessage();
-  taskMessage('braineven');
-  const playerName = getName();
-  getAnswer('braineven', playerName);
-};
-
-// 5 point
-const calculator = () => {
-  welcomeMessage();
-  taskMessage('calculator');
-  const playerName = getName();
-  getAnswer('calculator', playerName);
-};
-
-export { braineven, name, calculator };
+export { welcomeMessage, taskMessage, getName, getAnswer };
