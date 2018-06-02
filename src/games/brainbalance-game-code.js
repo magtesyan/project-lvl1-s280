@@ -36,6 +36,7 @@ const getBalance = (digit) => {
   if (maximalDigit - minimalDigit > 1) {
     digits[maxcounter] -= 1;
     digits[mincounter] += 1;
+    digits.sort();
     for (counter = 0; counter < lengthDigit; counter += 1) {
       correctAnswer += digits[counter];
     }
