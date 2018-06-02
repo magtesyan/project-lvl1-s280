@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 import getRandomDigit from './utils';
 import { isEven } from './games/braineven-game-code';
-import getOpResult from './games/braincalculator-game-code';
+import { getOpResult } from './games/braincalculator-game-code';
+import { getGCD } from './games/brain-gcd-game-code';
 
 // WelcomeMessage - Welcome to the Brain Games!
 const welcomeMessage = () => console.log('Welcome to the Brain Games!');
@@ -40,16 +41,7 @@ const getAnswer = (game, playerName) => {
       correctAnswer += getOpResult(digit1, digit2, digit3)[0];
       operator += getOpResult(digit1, digit2, digit3)[1];
     }
-    if (game === 'braingcd') {
-      let minimalNumber = Math.min(digit1, digit2);
-      while (minimalNumber !== 0) {
-        if (digit1 % minimalNumber === 0 && digit2 % minimalNumber === 0) {
-          correctAnswer += minimalNumber;
-          break;
-        }
-        minimalNumber -= 1;
-      }
-    }
+    if (game === 'braingcd') correctAnswer += getGCD(digit1, digit2);
     getQuestion(game, digit1, digit2, operator);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
