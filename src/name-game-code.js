@@ -6,4 +6,4 @@ const name = () => {
   console.log(`Hello, ${name0}`);
 };
 
-export default { name };
+export default name;
