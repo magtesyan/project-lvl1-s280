@@ -34,9 +34,9 @@ const getAnswer = (game, playerName) => {
   for (let counter = 0; counter < 3; counter += 1) {
     let correctAnswer = '';
     let operator = '';
-    const digit1 = getRandomDigit;
-    const digit2 = getRandomDigit;
-    const digit3 = getRandomDigit;
+    const digit1 = getRandomDigit();
+    const digit2 = getRandomDigit();
+    const digit3 = getRandomDigit();
     if (game === 'braineven') correctAnswer += isEven(digit1);
     if (game === 'calculator') {
       if (digit3 < 33) {
