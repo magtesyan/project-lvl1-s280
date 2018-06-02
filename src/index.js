@@ -7,7 +7,7 @@ const welcomeMessage = () => console.log('Welcome to the Brain Games!');
 // TaskMessage
 const taskMessage = (game) => {
   if (game === 'braineven') console.log('Answer "yes" if number even otherwise answer "no".\n');
-  if (game === 'calculator') console.log('What is the result of the expression?\n');
+  if (game === 'braincalculator') console.log('What is the result of the expression?\n');
   if (game === 'braingcd') console.log('Find the greatest common divisor of given numbers.\n');
 };
 
@@ -27,7 +27,7 @@ const isEven = (digit) => {
 // GetQuestion
 const getQuestion = (game, digit1, digit2, operator) => {
   if (game === 'braineven') console.log(`Question: ${digit1}`);
-  if (game === 'calculator') console.log(`Question: ${digit1} ${operator} ${digit2}`);
+  if (game === 'braincalculator') console.log(`Question: ${digit1} ${operator} ${digit2}`);
   if (game === 'braingcd') console.log(`Question: ${digit1} ${digit2}`);
 };
 
@@ -40,7 +40,7 @@ const getAnswer = (game, playerName) => {
     const digit2 = getRandomDigit();
     const digit3 = getRandomDigit();
     if (game === 'braineven') correctAnswer += isEven(digit1);
-    if (game === 'calculator') {
+    if (game === 'braincalculator') {
       if (digit3 < 33) {
         correctAnswer += digit1 + digit2;
         operator += '+';

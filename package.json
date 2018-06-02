@@ -2,7 +2,7 @@
   "name": "brainishe",
   "version": "1.1.7",
   "description": "1st hexlet project",
-  "main": "./index.js",
+  "main": "index.js",
   "scripts": {
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
@@ -13,7 +13,7 @@
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "calculator": "dist/bin/calculator.js",
+    "calculator": "dist/bin/brain-calculator.js",
     "brain-gcd": "dist/bin/brain-gcd.js"
   },
   "files": [

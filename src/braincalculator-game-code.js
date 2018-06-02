@@ -1,11 +1,11 @@
 // 5 point
 import { welcomeMessage, taskMessage, getName, getAnswer } from './index';
 
-const calculator = () => {
+const braincalculator = () => {
   welcomeMessage();
-  taskMessage('calculator');
+  taskMessage('braincalculator');
   const playerName = getName();
-  getAnswer('calculator', playerName);
+  getAnswer('braincalculator', playerName);
 };
 
-export default calculator;
+export default braincalculator;
