@@ -54,10 +54,9 @@ const getAnswer = (game, playerName) => {
     }
     if (game === 'braingcd') {
       let minimalNumber = Math.min(digit1, digit2);
-      correctAnswer = 0;
       while (minimalNumber !== 0) {
         if (digit1 % minimalNumber === 0 && digit2 % minimalNumber === 0) {
-          correctAnswer = minimalNumber;
+          correctAnswer += minimalNumber;
           break;
         }
         minimalNumber -= 1;
