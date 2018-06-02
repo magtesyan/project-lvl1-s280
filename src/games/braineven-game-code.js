@@ -8,4 +8,10 @@ const braineven = () => {
   getAnswer('braineven', playerName);
 };
 
-export default braineven;
+// IsEven
+const isEven = (digit) => {
+  if (digit % 2 === 0) return 'yes';
+  return 'no';
+};
+
+export { braineven, isEven };

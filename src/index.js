@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 import getRandomDigit from './utils';
+import { isEven } from './games/braineven-game-code';
+import { getOpResult } from './games/braincalculator-game-code';
 
 // WelcomeMessage - Welcome to the Brain Games!
 const welcomeMessage = () => console.log('Welcome to the Brain Games!');
@@ -18,12 +20,6 @@ const getName = () => {
   return playerName;
 };
 
-// IsEven
-const isEven = (digit) => {
-  if (digit % 2 === 0) return 'yes';
-  return 'no';
-};
-
 // GetQuestion
 const getQuestion = (game, digit1, digit2, operator) => {
   if (game === 'braineven') console.log(`Question: ${digit1}`);
@@ -34,23 +30,15 @@ const getQuestion = (game, digit1, digit2, operator) => {
 // GetAnswer
 const getAnswer = (game, playerName) => {
   for (let counter = 0; counter < 3; counter += 1) {
-    let correctAnswer = '';
     let operator = '';
+    let correctAnswer = '';
     const digit1 = getRandomDigit();
     const digit2 = getRandomDigit();
     const digit3 = getRandomDigit();
     if (game === 'braineven') correctAnswer += isEven(digit1);
     if (game === 'braincalculator') {
-      if (digit3 < 33) {
-        correctAnswer += digit1 + digit2;
-        operator += '+';
-      } else if (digit3 < 66) {
-        correctAnswer += digit1 - digit2;
-        operator += '-';
-      } else {
-        correctAnswer += digit1 * digit2;
-        operator += '*';
-      }
+      correctAnswer += getOpResult(digit1, digit2, digit3)[0];
+      operator += getOpResult(digit1, digit2, digit3)[1];
     }
     if (game === 'braingcd') {
       let minimalNumber = Math.min(digit1, digit2);
