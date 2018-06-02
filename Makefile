@@ -2,7 +2,7 @@ install:
 	npm install
 
 start:
-	npm run babel-node -- src/bin/calculator.js
+	npm run babel-node -- src/bin/braingcd.js
 
 publish:
 	npm publish
