@@ -8,4 +8,4 @@ const calculator = () => {
   getAnswer('calculator', playerName);
 };
 
-export default { calculator };
+export default calculator;
