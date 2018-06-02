@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import getRandomDigit from './utils';
-import { isEven } from './games/braineven-game-code';
+import isEven from './games/braineven-game-code';
 import { getOpResult } from './games/braincalculator-game-code';
 
 // WelcomeMessage - Welcome to the Brain Games!
