@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import getRandomDigit from './utils';
 
+const digit5 = getRandomDigit();
 // WelcomeMessage - Welcome to the Brain Games!
 const welcomeMessage = () => console.log('Welcome to the Brain Games!');
 
