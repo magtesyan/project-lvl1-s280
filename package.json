@@ -1,6 +1,6 @@
 {
   "name": "brainishe",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "1st hexlet project",
   "main": "index.js",
   "scripts": {
