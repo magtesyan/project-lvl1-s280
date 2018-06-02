@@ -1,9 +1,10 @@
 // 4 point
-import { welcomeMessage, taskMessage, getName, getAnswer } from '..';
+import { welcomeMessage, getName, getAnswer } from '..';
 
 const braineven = () => {
   welcomeMessage();
-  taskMessage('braineven');
+  console.log('Answer "yes" if number even otherwise answer "no".\n');
+  // taskMessage('braineven');
   const playerName = getName();
   getAnswer('braineven', playerName);
 };

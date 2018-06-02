@@ -1,9 +1,10 @@
 // 5 point
-import { welcomeMessage, taskMessage, getName, getAnswer } from '..';
+import { welcomeMessage, getName, getAnswer } from '..';
 
 const braincalculator = () => {
   welcomeMessage();
-  taskMessage('braincalculator');
+  console.log('What is the result of the expression?\n');
+  // taskMessage('braincalculator');
   const playerName = getName();
   getAnswer('braincalculator', playerName);
 };

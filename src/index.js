@@ -8,11 +8,11 @@ import { getGCD } from './games/brain-gcd-game-code';
 const welcomeMessage = () => console.log('Welcome to the Brain Games!');
 
 // TaskMessage
-const taskMessage = (game) => {
+/* const taskMessage = (game) => {
   if (game === 'braineven') console.log('Answer "yes" if number even otherwise answer "no".\n');
   if (game === 'braincalculator') console.log('What is the result of the expression?\n');
   if (game === 'braingcd') console.log('Find the greatest common divisor of given numbers.\n');
-};
+}; */
 
 // AskingName
 const getName = () => {
@@ -50,4 +50,4 @@ const getAnswer = (game, playerName) => {
   return console.log(`Congratulations, ${playerName}!`);
 };
 
-export { welcomeMessage, taskMessage, getName, getAnswer };
+export { welcomeMessage, getName, getAnswer };

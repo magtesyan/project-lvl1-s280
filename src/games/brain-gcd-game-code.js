@@ -1,9 +1,10 @@
 // 6 point
-import { welcomeMessage, taskMessage, getName, getAnswer } from '..';
+import { welcomeMessage, getName, getAnswer } from '..';
 
 const braingcd = () => {
   welcomeMessage();
-  taskMessage('braingcd');
+  console.log('Find the greatest common divisor of given numbers.\n');
+  // taskMessage('braingcd');
   const playerName = getName();
   getAnswer('braingcd', playerName);
 };
