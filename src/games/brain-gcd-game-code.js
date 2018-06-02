@@ -1,5 +1,5 @@
 // 6 point
-import { welcomeMessage, taskMessage, getName, getAnswer } from './index';
+import { welcomeMessage, taskMessage, getName, getAnswer } from '..';
 
 const braingcd = () => {
   welcomeMessage();

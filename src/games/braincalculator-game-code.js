@@ -1,5 +1,5 @@
 // 5 point
-import { welcomeMessage, taskMessage, getName, getAnswer } from './index';
+import { welcomeMessage, taskMessage, getName, getAnswer } from '..';
 
 const braincalculator = () => {
   welcomeMessage();
