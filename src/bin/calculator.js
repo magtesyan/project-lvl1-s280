@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import calculator from '../calculator-game-code';
+import base from '../calculator-game-code';
 
-calculator();
+base();
