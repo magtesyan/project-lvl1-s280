@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import name from '../name-game-code';
+import brainname from '../brainname-game-code';
 
-name();
+brainname();
