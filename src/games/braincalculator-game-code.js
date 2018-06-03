@@ -5,10 +5,10 @@ import getRandomDigit from '../utils';
 const getOpResult = (digit1, digit2, digit3) => {
   let correctAnswer = '';
   let operator = '';
-  if (digit3 < 33) {
+  if (digit3 < 333) {
     correctAnswer += digit1 + digit2;
     operator += '+';
-  } else if (digit3 < 66) {
+  } else if (digit3 < 666) {
     correctAnswer += digit1 - digit2;
     operator += '-';
   } else {
