@@ -1,8 +1,4 @@
 import readlineSync from 'readline-sync';
-import { isEven } from './games/braineven-game-code';
-import { getOpResult } from './games/braincalculator-game-code';
-
-import { getBalance } from './games/brainbalance-game-code';
 
 // GetQuestion
 const getQuestion = (game, digit1, digit2, operator) => {
