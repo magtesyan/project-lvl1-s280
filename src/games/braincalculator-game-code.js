@@ -27,8 +27,8 @@ const braincalculator = () => {
     const digit1 = getRandomDigit();
     const digit2 = getRandomDigit();
     const digit3 = getRandomDigit();
-    correctAnswer[counter] += getOpResult(digit1, digit2, digit3)[0];
-    operator[counter] += getOpResult(digit1, digit2, digit3)[1];
+    correctAnswer[counter] = getOpResult(digit1, digit2, digit3)[0];
+    operator[counter] = getOpResult(digit1, digit2, digit3)[1];
     question[counter] = (`Question: ${digit1} ${operator[counter]} ${digit2}`);
   }
   engine(task, question, correctAnswer);
