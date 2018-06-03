@@ -5,23 +5,6 @@ import { getOpResult } from './games/braincalculator-game-code';
 import { getGCD } from './games/brain-gcd-game-code';
 import { getBalance } from './games/brainbalance-game-code';
 
-// WelcomeMessage - Welcome to the Brain Games!
-const welcomeMessage = () => console.log('Welcome to the Brain Games!');
-
-// TaskMessage
-/* const taskMessage = (game) => {
-  if (game === 'braineven') console.log('Answer "yes" if number even otherwise answer "no".\n');
-  if (game === 'braincalculator') console.log('What is the result of the expression?\n');
-  if (game === 'braingcd') console.log('Find the greatest common divisor of given numbers.\n');
-}; */
-
-// AskingName
-const getName = () => {
-  const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${playerName}!\n`);
-  return playerName;
-};
-
 // GetQuestion
 const getQuestion = (game, digit1, digit2, operator) => {
   if (game === 'braineven' || game === 'brainbalance') console.log(`Question: ${digit1}`);
@@ -29,8 +12,11 @@ const getQuestion = (game, digit1, digit2, operator) => {
   if (game === 'braingcd') console.log(`Question: ${digit1} ${digit2}`);
 };
 
-// GetAnswer
-const getAnswer = (game, playerName) => {
+const engine = (taskMessage, game) => {
+  console.log(`Welcome to the Brain Games!\n${taskMessage}\n`);
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello ${playerName}!\n`);
+
   for (let counter = 0; counter < 3; counter += 1) {
     let operator = '';
     let correctAnswer = '';
@@ -52,4 +38,5 @@ const getAnswer = (game, playerName) => {
   return console.log(`Congratulations, ${playerName}!`);
 };
 
-export { welcomeMessage, getName, getAnswer };
+
+export default { engine };
