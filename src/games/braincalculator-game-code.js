@@ -19,8 +19,8 @@ const getOpResult = (digit1, digit2, digit3) => {
 };
 
 const braincalculator = () => {
-  const correctAnswer = [3];
-  const question = [3];
+  const correctAnswer = [];
+  const question = [];
   const operator = [];
   const task = ('What is the result of the expression?');
   for (let counter = 0; counter < 3; counter += 1) {
