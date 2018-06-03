@@ -21,7 +21,7 @@ const getOpResult = (digit1, digit2, digit3) => {
 const braincalculator = () => {
   const correctAnswer = [3];
   const question = [3];
-  const operator = [3];
+  const operator = [];
   const task = ('What is the result of the expression?');
   for (let counter = 0; counter < 3; counter += 1) {
     const digit1 = getRandomDigit();
