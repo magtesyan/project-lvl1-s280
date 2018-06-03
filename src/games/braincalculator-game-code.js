@@ -22,7 +22,7 @@ const braincalculator = () => {
     if (digit3 < 333) operator[counter] = '+';
     else if (digit3 < 666) operator[counter] = '-';
     else operator[counter] = '*';
-    correctAnswer[counter] = getOpResult(digit1, digit2, operator);
+    correctAnswer[counter] = getOpResult(digit1, digit2, operator[counter]);
     question[counter] = (`Question: ${digit1} ${operator[counter]} ${digit2}`);
   }
   engine(task, question, correctAnswer);
