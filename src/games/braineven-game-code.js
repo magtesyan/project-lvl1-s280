@@ -3,7 +3,7 @@ import engine from '..';
 
 const braineven = () => {
   const task = ('Answer "yes" if number even otherwise answer "no".');
-  engine(task, 'braincalculator');
+  engine(task, 'brainceven');
 };
 
 // IsEven
