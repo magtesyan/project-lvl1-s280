@@ -1,12 +1,9 @@
 // 4 point
-import { welcomeMessage, getName, getAnswer } from '..';
+import engine from '..';
 
 const brainbalance = () => {
-  welcomeMessage();
-  console.log('Balance the given number.\n');
-  // taskMessage('braineven');
-  const playerName = getName();
-  getAnswer('brainbalance', playerName);
+  const task = ('Balance the given number.');
+  engine(task, 'brainbalance');
 };
 
 // getBalance

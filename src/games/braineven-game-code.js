@@ -1,12 +1,9 @@
 // 4 point
-import { welcomeMessage, getName, getAnswer } from '..';
+import engine from '..';
 
 const braineven = () => {
-  welcomeMessage();
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
-  // taskMessage('braineven');
-  const playerName = getName();
-  getAnswer('braineven', playerName);
+  const task = ('Answer "yes" if number even otherwise answer "no".');
+  engine(task, 'braincalculator');
 };
 
 // IsEven
