@@ -3,7 +3,7 @@ import engine from '..';
 
 const braingcd = () => {
   const task = ('Find the greatest common divisor of given numbers.');
-  engine(task, 'braineven');
+  engine(task, 'braingcd');
 };
 
 const getGCD = (digit1, digit2) => {
