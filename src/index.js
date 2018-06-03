@@ -1,10 +1,5 @@
 import readlineSync from 'readline-sync';
 
-// GetQuestion
-const getQuestion = (game, digit1, digit2, operator) => {
-  if (game === 'braineven') console.log(`Question: ${digit1}`);
-};
-
 const engine = (taskMessage, question, correctAnswer) => {
   console.log(`Welcome to the Brain Games!\n${taskMessage}\n`);
   const playerName = readlineSync.question('May I have your name? ');
