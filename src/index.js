@@ -39,4 +39,4 @@ const engine = (taskMessage, game) => {
 };
 
 
-export default { engine };
+export default engine;
