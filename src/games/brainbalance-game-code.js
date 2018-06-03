@@ -1,10 +1,6 @@
 // 4 point
 import engine from '..';
-
-const brainbalance = () => {
-  const task = ('Balance the given number.');
-  engine(task, 'brainbalance');
-};
+import getRandomDigit from '../utils';
 
 // getBalance
 const getBalance = (digit) => {
@@ -42,4 +38,16 @@ const getBalance = (digit) => {
   return digit;
 };
 
-export { brainbalance, getBalance };
+const brainbalance = () => {
+  const correctAnswer = [];
+  const question = [];
+  const task = ('Balance the given number.');
+  for (let counter = 0; counter < 3; counter += 1) {
+    const digit1 = getRandomDigit();
+    question[counter] = (`Question: ${digit1}`);
+    correctAnswer[counter] = getBalance(digit1);
+  }
+  engine(task, question, correctAnswer);
+};
+
+export default brainbalance;
