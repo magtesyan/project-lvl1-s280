@@ -1,10 +1,6 @@
 // 5 point
 import engine from '..';
-
-const braincalculator = () => {
-  const task = ('What is the result of the expression?');
-  engine(task, 'braincalculator');
-};
+import getRandomDigit from '../utils';
 
 const getOpResult = (digit1, digit2, digit3) => {
   let correctAnswer = '';
@@ -20,6 +16,22 @@ const getOpResult = (digit1, digit2, digit3) => {
     operator += '*';
   }
   return [correctAnswer, operator];
+};
+
+const braincalculator = () => {
+  const correctAnswer = [3];
+  const question = [3];
+  const operator = [3];
+  const task = ('What is the result of the expression?');
+  for (let counter = 0; counter < 3; counter += 1) {
+    const digit1 = getRandomDigit();
+    const digit2 = getRandomDigit();
+    const digit3 = getRandomDigit();
+    correctAnswer[counter] = getOpResult(digit1, digit2, digit3).values(0);
+    operator[counter] = getOpResult(digit1, digit2, digit3).values(1);
+    question[counter] = (`Question: ${digit1} ${operator[counter]} ${digit2}`);
+  }
+  engine(task, question, correctAnswer);
 };
 
 export { braincalculator, getOpResult };

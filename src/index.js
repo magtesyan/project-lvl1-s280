@@ -3,7 +3,6 @@ import readlineSync from 'readline-sync';
 // GetQuestion
 const getQuestion = (game, digit1, digit2, operator) => {
   if (game === 'braineven') console.log(`Question: ${digit1}`);
-  if (game === 'braincalculator') console.log(`Question: ${digit1} ${operator} ${digit2}`);
 };
 
 const engine = (taskMessage, question, correctAnswer) => {
