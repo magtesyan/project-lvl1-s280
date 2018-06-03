@@ -1,5 +1,5 @@
 // 6 point
-import { engine } from '..';
+import engine from '..';
 
 const braingcd = () => {
   const task = ('Find the greatest common divisor of given numbers.');
