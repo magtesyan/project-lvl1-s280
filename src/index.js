@@ -1,4 +1,8 @@
 import readlineSync from 'readline-sync';
+import { isEven } from './games/braineven-game-code';
+import { getOpResult } from './games/braincalculator-game-code';
+
+import { getBalance } from './games/brainbalance-game-code';
 
 // GetQuestion
 const getQuestion = (game, digit1, digit2, operator) => {
@@ -12,8 +16,9 @@ const engine = (taskMessage, question, correctAnswer) => {
   console.log(`Hello ${playerName}!\n`);
 
   for (let counter = 0; counter < 3; counter += 1) {
-    const answer = readlineSync.question(`${question}\nYour answer: `);
-    if (answer !== correctAnswer) return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
+    console.log(question);
+    const answer = readlineSync.question('Your answer: ');
+    if (answer !== correctAnswer[counter]) return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
     console.log('Correct!\n');
   }
   return console.log(`Congratulations, ${playerName}!`);
