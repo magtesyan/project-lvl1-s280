@@ -2,20 +2,12 @@
 import engine from '..';
 import getRandomDigit from '../utils';
 
-const getOpResult = (digit1, digit2, digit3) => {
+const getOpResult = (digit1, digit2, operator) => {
   let correctAnswer = '';
-  let operator = '';
-  if (digit3 < 333) {
-    correctAnswer += digit1 + digit2;
-    operator += '+';
-  } else if (digit3 < 666) {
-    correctAnswer += digit1 - digit2;
-    operator += '-';
-  } else {
-    correctAnswer += digit1 * digit2;
-    operator += '*';
-  }
-  return [correctAnswer, operator];
+  if (operator === '+') correctAnswer += digit1 + digit2;
+  if (operator === '-') correctAnswer += digit1 - digit2;
+  if (operator === '*') correctAnswer += digit1 * digit2;
+  return correctAnswer;
 };
 
 const braincalculator = () => {
@@ -27,8 +19,10 @@ const braincalculator = () => {
     const digit1 = getRandomDigit();
     const digit2 = getRandomDigit();
     const digit3 = getRandomDigit();
-    correctAnswer[counter] = getOpResult(digit1, digit2, digit3)[0];
-    operator[counter] = getOpResult(digit1, digit2, digit3)[1];
+    if (digit3 < 333) operator[counter] = '+';
+    else if (digit3 < 666) operator[counter] = '-';
+    else operator[counter] = '*';
+    correctAnswer[counter] = getOpResult(digit1, digit2, operator);
     question[counter] = (`Question: ${digit1} ${operator[counter]} ${digit2}`);
   }
   engine(task, question, correctAnswer);
