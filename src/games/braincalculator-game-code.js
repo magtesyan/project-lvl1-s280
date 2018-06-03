@@ -3,7 +3,7 @@ import engine from '..';
 import getRandomDigit from '../utils';
 
 const getOpResult = (digit1, digit2, operator) => {
-  let correctAnswer = '';
+  let correctAnswer = 0;
   if (operator === '+') correctAnswer += digit1 + digit2;
   if (operator === '-') correctAnswer += digit1 - digit2;
   if (operator === '*') correctAnswer += digit1 * digit2;
