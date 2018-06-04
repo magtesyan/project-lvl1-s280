@@ -16,7 +16,7 @@ const startRound = () => {
   for (let counter = 0; counter < progressionArrow.length; counter += 1) {
     if (counter === randomDigit) {
       question += '.. ';
-      correctAnswer = progressionArrow[counter];
+      correctAnswer = String(progressionArrow[counter]);
     } else question += `${progressionArrow[counter]} `;
   }
   return [question, correctAnswer];
