@@ -16,16 +16,16 @@ const getGCD = (digit1, digit2) => {
   return correctAnswer;
 };
 
+const startRound = () => {
+  const digit1 = getRandomDigit();
+  const digit2 = getRandomDigit();
+  const question = (`Question: ${digit1} ${digit2}`);
+  const correctAnswer = getGCD(digit1, digit2);
+  return [question, correctAnswer];
+};
 
 const braingcd = () => {
   const task = ('Find the greatest common divisor of given numbers.');
-  const startRound = () => {
-    const digit1 = getRandomDigit();
-    const digit2 = getRandomDigit();
-    const question = (`Question: ${digit1} ${digit2}`);
-    const correctAnswer = getGCD(digit1, digit2);
-    return [question, correctAnswer];
-  };
   engine(task, startRound);
 };
 
