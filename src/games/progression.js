@@ -4,7 +4,7 @@ import getRandomNumber from '../utils';
 
 const task = ('What number is missing in this progression?');
 const progressionArrow = [10];
-for (let counter = 0; counter < progressionArrow.length; counter += 1) {
+for (let counter = 0; counter < 10; counter += 1) {
   progressionArrow[counter] = counter + 2;
 }
 
