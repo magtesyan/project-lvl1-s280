@@ -1,6 +1,8 @@
 // 4 point
 import engine from '..';
-import getRandomDigit from '../utils';
+import getRandomNumber from '../utils';
+
+const task = ('Balance the given number.');
 
 // getBalance
 const getBalance = (digit) => {
@@ -39,14 +41,13 @@ const getBalance = (digit) => {
 };
 
 const startRound = () => {
-  const digit1 = getRandomDigit();
-  const question = (`Question: ${digit1}`);
-  const correctAnswer = getBalance(digit1);
+  const randomDigit1 = getRandomNumber();
+  const question = (`${randomDigit1}`);
+  const correctAnswer = getBalance(randomDigit1);
   return [question, correctAnswer];
 };
 
 const brainbalance = () => {
-  const task = ('Balance the given number.');
   engine(task, startRound);
 };
 

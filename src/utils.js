@@ -1,4 +1,4 @@
 // RandomDigit
-const getRandomDigit = () => Math.round(Math.random() * 1000);
+const getRandomNumber = () => Math.round(Math.random() * 1000);
 
-export default getRandomDigit;
+export default getRandomNumber;

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import brainbalance from '../games/brainbalance-game-code';
+import brainbalance from '../games/balance';
 
 brainbalance();
