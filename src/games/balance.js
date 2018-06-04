@@ -41,9 +41,9 @@ const getBalance = (digit) => {
 };
 
 const startRound = () => {
-  const randomDigit1 = getRandomNumber();
-  const question = (`${randomDigit1}`);
-  const correctAnswer = getBalance(randomDigit1);
+  const randomDigit = getRandomNumber();
+  const question = (`${randomDigit}`);
+  const correctAnswer = getBalance(randomDigit);
   return [question, correctAnswer];
 };
 

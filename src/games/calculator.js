@@ -4,24 +4,24 @@ import getRandomNumber from '../utils';
 
 const task = ('What is the result of the expression?');
 
-const getOpResult = (digit1, digit2, operator) => {
+const getOpResult = (randomDigit1st, randomDigit2nd, operator) => {
   let correctAnswer = 0;
-  if (operator === '+') correctAnswer += digit1 + digit2;
-  if (operator === '-') correctAnswer += digit1 - digit2;
-  if (operator === '*') correctAnswer += digit1 * digit2;
+  if (operator === '+') correctAnswer += randomDigit1st + randomDigit2nd;
+  if (operator === '-') correctAnswer += randomDigit1st - randomDigit2nd;
+  if (operator === '*') correctAnswer += randomDigit1st * randomDigit2nd;
   return correctAnswer;
 };
 
 const startRound = () => {
-  const randomDigit1 = getRandomNumber();
-  const randomDigit2 = getRandomNumber();
-  const randomDigit3 = getRandomNumber();
+  const randomDigit1st = getRandomNumber();
+  const randomDigit2nd = getRandomNumber();
+  const randomDigit3rd = getRandomNumber();
   let operator = '';
-  if (randomDigit3 < 333) operator += '+';
-  else if (randomDigit3 < 666) operator += '-';
+  if (randomDigit3rd < 333) operator += '+';
+  else if (randomDigit3rd < 666) operator += '-';
   else operator += '*';
-  const correctAnswer = String(getOpResult(randomDigit1, randomDigit2, operator));
-  const question = (`${randomDigit1} ${operator} ${randomDigit2}`);
+  const correctAnswer = String(getOpResult(randomDigit1st, randomDigit2nd, operator));
+  const question = (`${randomDigit1st} ${operator} ${randomDigit2nd}`);
   return [question, correctAnswer];
 };
 
