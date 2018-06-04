@@ -6,9 +6,9 @@ const engine = (taskMessage, startRound) => {
   console.log(`Hello ${playerName}!\n`);
 
   for (let counter = 0; counter < 3; counter += 1) {
-    const gameParameters = [];
-    gameParameters[0] = startRound();
-    gameParameters[1] = startRound();
+    const gameParameters = startRound();
+    // const question = gameParameters[0];
+    // const answer = gameParameters[1];
     console.log(gameParameters[0]);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== gameParameters[1]) return console.log(`${answer} is wrong answer ;(. Correct answer was ${gameParameters[1]}`);
