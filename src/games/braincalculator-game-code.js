@@ -11,21 +11,20 @@ const getOpResult = (digit1, digit2, operator) => {
 };
 
 const braincalculator = () => {
-  const correctAnswer = [];
-  const question = [];
-  const operator = [];
   const task = ('What is the result of the expression?');
-  for (let counter = 0; counter < 3; counter += 1) {
+  const startRound = () => {
     const digit1 = getRandomDigit();
     const digit2 = getRandomDigit();
     const digit3 = getRandomDigit();
-    if (digit3 < 333) operator[counter] = '+';
-    else if (digit3 < 666) operator[counter] = '-';
-    else operator[counter] = '*';
-    correctAnswer[counter] = String(getOpResult(digit1, digit2, operator[counter]));
-    question[counter] = (`Question: ${digit1} ${operator[counter]} ${digit2}`);
-  }
-  engine(task, question, correctAnswer);
+    let operator = '';
+    if (digit3 < 333) operator += '+';
+    else if (digit3 < 666) operator += '-';
+    else operator += '*';
+    const correctAnswer = String(getOpResult(digit1, digit2, operator));
+    const question = (`Question: ${digit1} ${operator} ${digit2}`);
+    return [question, correctAnswer];
+  };
+  engine(task, startRound);
 };
 
 export default braincalculator;

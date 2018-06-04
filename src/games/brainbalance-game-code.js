@@ -39,15 +39,14 @@ const getBalance = (digit) => {
 };
 
 const brainbalance = () => {
-  const correctAnswer = [];
-  const question = [];
   const task = ('Balance the given number.');
-  for (let counter = 0; counter < 3; counter += 1) {
+  const startRound = () => {
     const digit1 = getRandomDigit();
-    question[counter] = (`Question: ${digit1}`);
-    correctAnswer[counter] = getBalance(digit1);
-  }
-  engine(task, question, correctAnswer);
+    const question = (`Question: ${digit1}`);
+    const correctAnswer = getBalance(digit1);
+    return [question, correctAnswer];
+  };
+  engine(task, startRound);
 };
 
 export default brainbalance;
