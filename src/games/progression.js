@@ -5,7 +5,7 @@ import getRandomNumber from '../utils';
 const task = ('What number is missing in this progression?');
 const progressionArrow = [10];
 for (let counter = 0; counter < 10; counter += 1) {
-  progressionArrow[counter] = counter + 2;
+  progressionArrow[counter] = counter + (2 * counter);
 }
 
 const startRound = () => {
@@ -17,7 +17,7 @@ const startRound = () => {
     if (counter === randomDigit) {
       question += '.. ';
       correctAnswer = progressionArrow[counter];
-    } else question += progressionArrow[counter];
+    } else question += `${progressionArrow[counter]} `;
   }
   return [question, correctAnswer];
 };
