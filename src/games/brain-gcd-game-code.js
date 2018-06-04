@@ -16,7 +16,7 @@ const getGCD = (digit1, digit2) => {
   return correctAnswer;
 };
 
-const braingcd = () => {
+/* const braingcd = () => {
   const correctAnswer = [];
   const question = [];
   const task = ('Find the greatest common divisor of given numbers.');
@@ -27,6 +27,18 @@ const braingcd = () => {
     correctAnswer[counter] = getGCD(digit1, digit2);
   }
   engine(task, question, correctAnswer);
+}; */
+
+const braingcd = () => {
+  const task = ('Find the greatest common divisor of given numbers.');
+  const startRound = () => {
+    const digit1 = getRandomDigit();
+    const digit2 = getRandomDigit();
+    const question = (`Question: ${digit1} ${digit2}`);
+    const correctAnswer = getGCD(digit1, digit2);
+    return [question, correctAnswer];
+  };
+  engine(task, startRound);
 };
 
 export default braingcd;
