@@ -38,14 +38,15 @@ const getBalance = (digit) => {
   return digit;
 };
 
+const startRound = () => {
+  const digit1 = getRandomDigit();
+  const question = (`Question: ${digit1}`);
+  const correctAnswer = getBalance(digit1);
+  return [question, correctAnswer];
+};
+
 const brainbalance = () => {
   const task = ('Balance the given number.');
-  const startRound = () => {
-    const digit1 = getRandomDigit();
-    const question = (`Question: ${digit1}`);
-    const correctAnswer = getBalance(digit1);
-    return [question, correctAnswer];
-  };
   engine(task, startRound);
 };
 
