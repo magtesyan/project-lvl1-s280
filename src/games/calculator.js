@@ -26,7 +26,6 @@ const startRound = () => {
   const randomDigit1st = getRandomNumber(100);
   const randomDigit2nd = getRandomNumber(100);
   const randomDigit3rd = getRandomNumber(3);
-  console.log(randomDigit3rd);
   let operator = '';
   switch (randomDigit3rd) {
     case 1:
@@ -41,7 +40,6 @@ const startRound = () => {
     default:
       break;
   }
-  console.log(operator);
   const correctAnswer = String(getOpResult(randomDigit1st, randomDigit2nd, operator));
   const question = (`${randomDigit1st} ${operator} ${randomDigit2nd}`);
   return [question, correctAnswer];
