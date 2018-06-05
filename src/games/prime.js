@@ -4,9 +4,9 @@ import getRandomNumber from '../utils';
 
 const task = ('Is this number prime?');
 
-const isPrime = (randomNumber) => {
-  for (let counter = 2; counter < randomNumber; counter += 1) {
-    if (randomNumber % counter === 0) return false;
+const isPrime = (number) => {
+  for (let counter = 2; counter < Math.sqrt(number); counter += 1) {
+    if (number % counter === 0) return false;
   }
   return true;
 };
