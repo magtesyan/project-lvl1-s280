@@ -8,13 +8,13 @@ const getOpResult = (randomDigit1st, randomDigit2nd, operator) => {
   let correctAnswer = 0;
   switch (operator) {
     case '+':
-      correctAnswer += randomDigit1st + randomDigit2nd;
+      correctAnswer = randomDigit1st + randomDigit2nd;
       break;
     case '-':
-      correctAnswer -= randomDigit1st + randomDigit2nd;
+      correctAnswer = randomDigit1st - randomDigit2nd;
       break;
     case '*':
-      correctAnswer *= randomDigit1st + randomDigit2nd;
+      correctAnswer = randomDigit1st * randomDigit2nd;
       break;
     default:
       break;
