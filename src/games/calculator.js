@@ -41,6 +41,7 @@ const startRound = () => {
     default:
       break;
   }
+  console.log(operator);
   const correctAnswer = String(getOpResult(randomDigit1st, randomDigit2nd, operator));
   const question = (`${randomDigit1st} ${operator} ${randomDigit2nd}`);
   return [question, correctAnswer];
