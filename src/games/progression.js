@@ -20,7 +20,7 @@ const getProgression = () => {
 const gameData = () => {
   let correctAnswer = 0;
   let question = '';
-  const randomNumber = getRandomNumber(10) + 1;
+  const randomNumber = getRandomNumber(9);
   progressionArrow = getProgression();
   for (let counter = 0; counter < progressionLength; counter += 1) {
     if (counter === randomNumber) {
