@@ -8,8 +8,8 @@ let progressionArrow = [progressionLength];
 
 const getProgression = () => {
   progressionArrow[0] = getRandomNumber(10);
-  const progrType = getRandomNumber(2);
-  const progrStep = getRandomNumber(3);
+  const progrType = getRandomNumber(1);
+  const progrStep = getRandomNumber(3) + 1;
   for (let counter = 1; counter < progressionLength; counter += 1) {
     if (progrType === 1) progressionArrow[counter] = progressionArrow[counter - 1] + progrStep;
     else progressionArrow[counter] = progressionArrow[counter - 1] * progrStep;
