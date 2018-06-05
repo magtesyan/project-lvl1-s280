@@ -8,7 +8,7 @@ let progressionArrow = [progressionLength];
 
 const getProgression = () => {
   progressionArrow[0] = getRandomNumber(10);
-  const progrType = getRandomNumber(1);
+  const progrType = getRandomNumber(2);
   const progrStep = getRandomNumber(3) + 1;
   for (let counter = 1; counter < progressionLength; counter += 1) {
     if (progrType === 1) progressionArrow[counter] = progressionArrow[counter - 1] + progrStep;
@@ -20,7 +20,7 @@ const getProgression = () => {
 const gameData = () => {
   let correctAnswer = 0;
   let question = '';
-  const randomNumber = getRandomNumber(10);
+  const randomNumber = getRandomNumber(10) + 1;
   progressionArrow = getProgression();
   for (let counter = 0; counter < progressionLength; counter += 1) {
     if (counter === randomNumber) {
