@@ -4,18 +4,13 @@ import getRandomNumber from '../utils';
 
 const task = ('Answer "yes" if number even otherwise answer "no".');
 
-const isEven = randomDigit => (randomDigit % 2 === 0);
-//  if (randomDigit % 2 === 0) return true;
-//  return false;
-// };
+const isEven = randomNumber => (randomNumber % 2 === 0);
 
 const startRound = () => {
-  const randomDigit = getRandomNumber(100);
-  const question = (`${randomDigit}`);
-  const correctAnswer = (isEven(randomDigit)) ? 'yes' : 'no';
+  const randomNumber = getRandomNumber(100);
+  const question = (`${randomNumber}`);
+  const correctAnswer = (isEven(randomNumber)) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
-const braineven = () => engine(task, startRound);
-
-export default braineven;
+export default () => engine(task, startRound);

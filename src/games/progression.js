@@ -11,9 +11,9 @@ for (let counter = 0; counter < 10; counter += 1) {
 const startRound = () => {
   let correctAnswer = 0;
   let question = '';
-  const randomDigit = (Math.round(getRandomNumber(10))) + 1;
+  const randomNumber = (Math.round(getRandomNumber(10))) + 1;
   for (let counter = 0; counter < progressionArrow.length; counter += 1) {
-    if (counter === randomDigit) {
+    if (counter === randomNumber) {
       question += '.. ';
       correctAnswer = String(progressionArrow[counter]);
     } else question += `${progressionArrow[counter]} `;
@@ -21,6 +21,4 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-const brainprogression = () => engine(task, startRound);
-
-export default brainprogression;
+export default () => engine(task, startRound);

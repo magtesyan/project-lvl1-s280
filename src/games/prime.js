@@ -4,20 +4,18 @@ import getRandomNumber from '../utils';
 
 const task = ('Is this number prime?');
 
-const isPrime = (randomDigit) => {
-  for (let counter = 2; counter < randomDigit; counter += 1) {
-    if (randomDigit % counter === 0) return false;
+const isPrime = (randomNumber) => {
+  for (let counter = 2; counter < randomNumber; counter += 1) {
+    if (randomNumber % counter === 0) return false;
   }
   return true;
 };
 
 const startRound = () => {
-  const randomDigit = getRandomNumber(100);
-  const question = (`${randomDigit}`);
-  const correctAnswer = (isPrime(randomDigit)) ? 'yes' : 'no';
+  const randomNumber = getRandomNumber(100);
+  const question = (`${randomNumber}`);
+  const correctAnswer = (isPrime(randomNumber)) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
-const brainprime = () => engine(task, startRound);
-
-export default brainprime;
+export default () => engine(task, startRound);

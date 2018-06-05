@@ -41,12 +41,10 @@ const getBalance = (digit) => {
 };
 
 const startRound = () => {
-  const randomDigit = getRandomNumber(1000);
-  const question = (`${randomDigit}`);
-  const correctAnswer = getBalance(randomDigit);
+  const randomNumber = getRandomNumber(1000);
+  const question = (`${randomNumber}`);
+  const correctAnswer = getBalance(randomNumber);
   return [question, correctAnswer];
 };
 
-const brainbalance = () => engine(task, startRound);
-
-export default brainbalance;
+export default () => engine(task, startRound);

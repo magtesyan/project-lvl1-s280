@@ -4,11 +4,11 @@ import getRandomNumber from '../utils';
 
 const task = ('Find the greatest common divisor of given numbers.');
 
-const getGCD = (randomDigit1st, randomDigit2nd) => {
+const getGCD = (randomNumber1st, randomNumber2nd) => {
   let correctAnswer = 0;
-  let minimalNumber = Math.min(randomDigit1st, randomDigit2nd);
+  let minimalNumber = Math.min(randomNumber1st, randomNumber2nd);
   while (minimalNumber !== 0) {
-    if (randomDigit1st % minimalNumber === 0 && randomDigit2nd % minimalNumber === 0) {
+    if (randomNumber1st % minimalNumber === 0 && randomNumber2nd % minimalNumber === 0) {
       correctAnswer += minimalNumber;
       break;
     }
@@ -18,13 +18,11 @@ const getGCD = (randomDigit1st, randomDigit2nd) => {
 };
 
 const startRound = () => {
-  const randomDigit1st = getRandomNumber(100);
-  const randomDigit2nd = getRandomNumber(100);
-  const question = (`${randomDigit1st} ${randomDigit2nd}`);
-  const correctAnswer = String(getGCD(randomDigit1st, randomDigit2nd));
+  const randomNumber1st = getRandomNumber(100);
+  const randomNumber2nd = getRandomNumber(100);
+  const question = (`${randomNumber1st} ${randomNumber2nd}`);
+  const correctAnswer = String(getGCD(randomNumber1st, randomNumber2nd));
   return [question, correctAnswer];
 };
 
-const braingcd = () => engine(task, startRound);
-
-export default braingcd;
+export default () => engine(task, startRound);
