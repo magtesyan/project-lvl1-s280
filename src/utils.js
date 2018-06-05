@@ -1,4 +1,4 @@
 // RandomDigit
-const getRandomNumber = range => Math.round((Math.random() * range) + 1);
+const getRandomNumber = range => Math.floor((Math.random() * range) + 1);
 
 export default getRandomNumber;
