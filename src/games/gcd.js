@@ -17,7 +17,7 @@ const getGCD = (randomNumber1st, randomNumber2nd) => {
   return correctAnswer;
 };
 
-const startRound = () => {
+const gameData = () => {
   const randomNumber1st = getRandomNumber(100);
   const randomNumber2nd = getRandomNumber(100);
   const question = (`${randomNumber1st} ${randomNumber2nd}`);
@@ -25,4 +25,4 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => engine(task, startRound);
+export default () => engine(task, gameData);

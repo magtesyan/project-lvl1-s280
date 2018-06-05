@@ -11,11 +11,11 @@ const isPrime = (randomNumber) => {
   return true;
 };
 
-const startRound = () => {
+const gameData = () => {
   const randomNumber = getRandomNumber(100);
   const question = (`${randomNumber}`);
   const correctAnswer = (isPrime(randomNumber)) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
-export default () => engine(task, startRound);
+export default () => engine(task, gameData);

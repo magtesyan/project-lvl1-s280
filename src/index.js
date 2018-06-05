@@ -13,11 +13,13 @@ const engine = (taskMessage, startRound) => {
     const correctAnswer = gameParameters[1];
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer !== correctAnswer) return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
+    if (answer !== correctAnswer) {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
+      return;
+    }
     console.log('Correct!\n');
   }
   console.log(`Congratulations, ${playerName}!`);
-  return undefined;
 };
 
 export default engine;

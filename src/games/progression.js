@@ -8,7 +8,7 @@ for (let counter = 0; counter < 10; counter += 1) {
   progressionArrow[counter] = counter + (2 * counter);
 }
 
-const startRound = () => {
+const gameData = () => {
   let correctAnswer = 0;
   let question = '';
   const randomNumber = (Math.round(getRandomNumber(10))) + 1;
@@ -21,4 +21,4 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => engine(task, startRound);
+export default () => engine(task, gameData);

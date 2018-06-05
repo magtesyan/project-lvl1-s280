@@ -4,7 +4,7 @@ import getRandomNumber from '../utils';
 
 const task = ('What is the result of the expression?');
 
-const startRound = () => {
+const gameData = () => {
   const randomNumber1st = getRandomNumber(100);
   const randomNumber2nd = getRandomNumber(100);
   const operationType = getRandomNumber(3);
@@ -30,4 +30,4 @@ const startRound = () => {
   return [question, String(correctAnswer)];
 };
 
-export default () => engine(task, startRound);
+export default () => engine(task, gameData);

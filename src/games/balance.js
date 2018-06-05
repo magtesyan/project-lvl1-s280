@@ -40,11 +40,11 @@ const getBalance = (digit) => {
   return digit;
 };
 
-const startRound = () => {
+const gameData = () => {
   const randomNumber = getRandomNumber(1000);
   const question = (`${randomNumber}`);
   const correctAnswer = getBalance(randomNumber);
   return [question, correctAnswer];
 };
 
-export default () => engine(task, startRound);
+export default () => engine(task, gameData);
