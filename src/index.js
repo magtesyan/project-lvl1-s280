@@ -9,8 +9,7 @@ const engine = (taskMessage, startRound) => {
 
   for (let counter = 0; counter < roundsQuantity; counter += 1) {
     const gameParameters = startRound();
-    const question = gameParameters[0];
-    const correctAnswer = gameParameters[1];
+    const [question, correctAnswer] = gameParameters;
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) {

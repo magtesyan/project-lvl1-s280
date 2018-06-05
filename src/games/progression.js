@@ -3,16 +3,21 @@ import engine from '..';
 import getRandomNumber from '../utils';
 
 const task = ('What number is missing in this progression?');
-const progressionArrow = [10];
-for (let counter = 0; counter < 10; counter += 1) {
-  progressionArrow[counter] = counter + (2 * counter);
+const progressionLength = 10;
+const progressionArrow = [progressionLength];
+progressionArrow[0] = getRandomNumber(10);
+const progrType = getRandomNumber(2);
+const progrStep = getRandomNumber(3);
+for (let counter = 1; counter < progressionLength; counter += 1) {
+  if (progrType === 1) progressionArrow[counter] = progressionArrow[counter - 1] + progrStep;
+  else progressionArrow[counter] = progressionArrow[counter - 1] * progrStep;
 }
 
 const gameData = () => {
   let correctAnswer = 0;
   let question = '';
-  const randomNumber = (Math.round(getRandomNumber(10))) + 1;
-  for (let counter = 0; counter < progressionArrow.length; counter += 1) {
+  const randomNumber = getRandomNumber(10);
+  for (let counter = 0; counter < progressionLength; counter += 1) {
     if (counter === randomNumber) {
       question += '.. ';
       correctAnswer = String(progressionArrow[counter]);
