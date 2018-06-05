@@ -29,13 +29,13 @@ const startRound = () => {
   console.log(randomDigit3rd);
   let operator = '';
   switch (randomDigit3rd) {
-    case '1':
+    case 1:
       operator += '+';
       break;
-    case '2':
+    case 2:
       operator += '-';
       break;
-    case '3':
+    case 3:
       operator += '*';
       break;
     default:
