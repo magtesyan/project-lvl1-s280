@@ -4,10 +4,10 @@ import getRandomNumber from '../utils';
 
 const task = ('Answer "yes" if number even otherwise answer "no".');
 
-const isEven = (randomDigit) => {
-  if (randomDigit % 2 === 0) return true;
-  return false;
-};
+const isEven = randomDigit => (randomDigit % 2 === 0);
+//  if (randomDigit % 2 === 0) return true;
+//  return false;
+// };
 
 const startRound = () => {
   const randomDigit = getRandomNumber(100);
