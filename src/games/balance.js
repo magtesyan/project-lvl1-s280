@@ -41,7 +41,7 @@ const getBalance = (digit) => {
 };
 
 const startRound = () => {
-  const randomDigit = getRandomNumber();
+  const randomDigit = getRandomNumber(1000);
   const question = (`${randomDigit}`);
   const correctAnswer = getBalance(randomDigit);
   return [question, correctAnswer];

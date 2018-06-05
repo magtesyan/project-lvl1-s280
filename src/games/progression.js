@@ -11,7 +11,7 @@ for (let counter = 0; counter < 10; counter += 1) {
 const startRound = () => {
   let correctAnswer = 0;
   let question = '';
-  const randomDigit = (Math.round(getRandomNumber() / 100)) + 1;
+  const randomDigit = (Math.round(getRandomNumber(10))) + 1;
   console.log(progressionArrow.length);
   for (let counter = 0; counter < progressionArrow.length; counter += 1) {
     if (counter === randomDigit) {

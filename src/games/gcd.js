@@ -18,8 +18,8 @@ const getGCD = (randomDigit1st, randomDigit2nd) => {
 };
 
 const startRound = () => {
-  const randomDigit1st = getRandomNumber();
-  const randomDigit2nd = getRandomNumber();
+  const randomDigit1st = getRandomNumber(100);
+  const randomDigit2nd = getRandomNumber(100);
   const question = (`${randomDigit1st} ${randomDigit2nd}`);
   const correctAnswer = String(getGCD(randomDigit1st, randomDigit2nd));
   return [question, correctAnswer];

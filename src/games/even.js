@@ -10,7 +10,7 @@ const isEven = (randomDigit) => {
 };
 
 const startRound = () => {
-  const randomDigit = getRandomNumber();
+  const randomDigit = getRandomNumber(100);
   const question = (`${randomDigit}`);
   const correctAnswer = (isEven(randomDigit)) ? 'yes' : 'no';
   return [question, correctAnswer];
