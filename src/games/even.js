@@ -16,8 +16,6 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-const braineven = () => {
-  engine(task, startRound);
-};
+const braineven = () => engine(task, startRound);
 
 export default braineven;

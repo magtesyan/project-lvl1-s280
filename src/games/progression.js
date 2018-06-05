@@ -21,8 +21,6 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-const brainprogression = () => {
-  engine(task, startRound);
-};
+const brainprogression = () => engine(task, startRound);
 
 export default brainprogression;

@@ -25,8 +25,6 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-const braingcd = () => {
-  engine(task, startRound);
-};
+const braingcd = () => engine(task, startRound);
 
 export default braingcd;

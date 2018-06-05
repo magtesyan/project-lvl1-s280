@@ -18,8 +18,6 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-const brainprime = () => {
-  engine(task, startRound);
-};
+const brainprime = () => engine(task, startRound);
 
 export default brainprime;

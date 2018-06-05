@@ -47,8 +47,6 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-const brainbalance = () => {
-  engine(task, startRound);
-};
+const brainbalance = () => engine(task, startRound);
 
 export default brainbalance;
