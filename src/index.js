@@ -17,7 +17,7 @@ const engine = (taskMessage, startRound) => {
     console.log('Correct!\n');
   }
   console.log(`Congratulations, ${playerName}!`);
-  return 0;
+  return undefined;
 };
 
 export default engine;

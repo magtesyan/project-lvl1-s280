@@ -6,16 +6,26 @@ const task = ('What is the result of the expression?');
 
 const getOpResult = (randomDigit1st, randomDigit2nd, operator) => {
   let correctAnswer = 0;
-  if (operator === '+') correctAnswer += randomDigit1st + randomDigit2nd;
-  if (operator === '-') correctAnswer += randomDigit1st - randomDigit2nd;
-  if (operator === '*') correctAnswer += randomDigit1st * randomDigit2nd;
+  switch (operator) {
+    case '1':
+      correctAnswer += randomDigit1st + randomDigit2nd;
+      break;
+    case '2':
+      correctAnswer -= randomDigit1st + randomDigit2nd;
+      break;
+    case '3':
+      correctAnswer *= randomDigit1st + randomDigit2nd;
+      break;
+    default:
+      break;
+  }
   return correctAnswer;
 };
 
 const startRound = () => {
-  const randomDigit1st = getRandomNumber();
-  const randomDigit2nd = getRandomNumber();
-  const randomDigit3rd = getRandomNumber();
+  const randomDigit1st = getRandomNumber(100);
+  const randomDigit2nd = getRandomNumber(100);
+  const randomDigit3rd = getRandomNumber(3);
   let operator = '';
   if (randomDigit3rd < 333) operator += '+';
   else if (randomDigit3rd < 666) operator += '-';

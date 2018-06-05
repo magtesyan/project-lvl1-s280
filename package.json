@@ -36,6 +36,7 @@
     "readline-sync": "^1.4.9"
   },
   "dependencies": {
+    "exit": "^0.1.2",
     "readline-sync": "^1.4.9"
   }
 }
